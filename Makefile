@@ -12,6 +12,7 @@ define KernelPackage/xt_ndpi
   SECTION:=oem
   CATEGORY:=OEM
   TITLE:=xt_ndpi
+  DEPENDS:=+iptables +iptables-mod-conntrack-extra
   AUTOLOAD:=$(call AutoLoad,90,xt_ndpi)
   FILES:=$(PKG_BUILD_DIR)/xt_ndpi.$(LINUX_KMOD_SUFFIX)
 endef
